@@ -33,6 +33,7 @@ const FutureValueLumpsum = () => {
 					Present Value
 				</label>
 				<input
+					data-testid='presentvalue'
 					value={presentValue || ""}
 					onChange={(e) => {
 						setPresentValue(e.target.value || "");
@@ -53,6 +54,7 @@ const FutureValueLumpsum = () => {
 					Interest
 				</label>
 				<input
+					data-testid='interest'
 					value={interest}
 					onChange={(e) => {
 						setInterest(e.target.value);
@@ -70,6 +72,7 @@ const FutureValueLumpsum = () => {
 					Years invested
 				</label>
 				<input
+					data-testid='years'
 					value={years}
 					onChange={(e) => {
 						setYears(e.target.value);
@@ -80,7 +83,9 @@ const FutureValueLumpsum = () => {
 					placeholder='Eg. 1, 2, 10, 20'
 				/>
 			</div>
-			<p>Your future value is {futureValue.toFixed(2)}</p>
+			<p data-testid='futurevalue'>
+				Your future value is {futureValue.toFixed(2)}
+			</p>
 		</>
 	);
 };
