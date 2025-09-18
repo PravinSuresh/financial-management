@@ -1,7 +1,7 @@
 function App() {
 	return (
 		<>
-			<h1>Financial Management</h1>
+			<h1>Financial Wealth Management</h1>
 		</>
 	);
 }
