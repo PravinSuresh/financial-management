@@ -23,6 +23,8 @@ const FutureValueLumpsum = () => {
 					parseInt(years)
 				)
 			);
+		} else {
+			setFutureValue(0);
 		}
 	}, [presentValue, interest, years]);
 	return (
