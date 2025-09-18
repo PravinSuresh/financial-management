@@ -15,7 +15,7 @@ const FutureValueLumpsum = () => {
 	}, []);
 
 	useEffect(() => {
-		if (presentValue && interest && years)
+		if (presentValue && interest && years) {
 			setFutureValue(
 				calculateFutureValue(
 					parseInt(presentValue),
@@ -23,6 +23,7 @@ const FutureValueLumpsum = () => {
 					parseInt(years)
 				)
 			);
+		}
 	}, [presentValue, interest, years]);
 	return (
 		<>
@@ -34,12 +35,9 @@ const FutureValueLumpsum = () => {
 				</label>
 				<input
 					data-testid='presentvalue'
-					value={presentValue || ""}
+					value={presentValue}
 					onChange={(e) => {
-						setPresentValue(e.target.value || "");
-					}}
-					onFocus={() => {
-						presentValue === "0" ? "" : presentValue;
+						setPresentValue(e.target.value);
 					}}
 					type='text'
 					className='form-control'
